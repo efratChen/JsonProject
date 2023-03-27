@@ -1,0 +1,7 @@
+<p>add works!</p>
+<form [formGroup]="addForm" (ngSubmit)="submit()">
+        <p><input type="text" formControlName="name" placeholder="name" /> </p>
+        <p *ngIf="addForm.controls.name.invalid&&addForm.controls.name.touched">name must be at least 2 letters</p>
+        <p><input type="text" formControlName="age" placeholder="age" /> </p>
+        <input type="submit" value="save in localStorage & json" [disabled]="addForm.invalid" />
+</form>
